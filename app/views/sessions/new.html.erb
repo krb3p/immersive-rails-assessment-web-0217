@@ -1,0 +1,10 @@
+<div id='login' style="text-align:center">
+
+      <%=form_tag login_path do %>
+      <div>Username: <%=text_field_tag :username, nil, {class: "form-control"} %></div>
+      <div>Password: <%=password_field_tag :password, nil, {class: "form-control"} %></div>
+      <br />
+      <div><%=submit_tag "Log In", {class: "form-control"} %></div>
+    <%end%>
+  </div>
+</div>

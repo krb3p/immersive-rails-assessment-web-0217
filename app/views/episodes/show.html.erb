@@ -1,0 +1,11 @@
+<h3>Episode: <%= @episode.number %></h3>
+<p>Date: <%= @episode.date %></p>
+
+<p>Guests:
+  <% if @guests.length > 0 %>
+    <% @guests.each do |guest| %>
+    <%= guest.name %>
+    <% end %>
+  <% else %>
+    <%= "There are currently no guests for this episode." %>
+  <% end %>

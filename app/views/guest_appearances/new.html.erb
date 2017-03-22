@@ -1,0 +1,21 @@
+<h1>Add new appearance</h1>
+
+<%= form_for @guest_appearance do |f| %>
+
+<div><%= f.label :guest %> </div>
+<div><%= collection_select(:guest_appearance, :guest_id, Guest.all, :id, :name, prompt: true) %>
+</p>
+<div><%= f.label :episode %> </div>
+<div><%= collection_select(:guest_appearance, :episode_id, Episode.all, :id, :number, prompt: true) %>
+</p>
+<div><%= f.label :rating %> </div>
+<div><%= f.text_field :rating, placeholder: "1 - 5" %></div>
+
+<br>
+<div class="">
+    <%= f.submit %>
+  </div>
+
+<% end %>
+
+<!-- dropdown for rating -->
